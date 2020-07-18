@@ -44,6 +44,8 @@ You could learn to implement below features.
 
 - A little of particle systems.
 
+- Some useful scripts.
+(Singleton, Shuffle, Rotator, etc)
 
 There are some detailed comments in source codes.
 
