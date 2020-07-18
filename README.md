@@ -4,13 +4,10 @@ The simple space shooter style game made using Unity.
 
 ## Description
 
-
-
------
-
-
 I have made this for beginners at game development.
+
 If you want to make a space shooter style game, this would be a good starting point to you.
+
 
 You could learn to implement below features.
 - How enemies to be created randomly.
@@ -30,9 +27,11 @@ You could learn to implement below features.
 
 
 There are some detailed comments in source codes.
+
 Feel free to ask me about the codes and bugs.
 
-Development environment.
+
+## Development environment.
 - Unity 2019.3.15f1
 
 
