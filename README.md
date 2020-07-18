@@ -14,6 +14,13 @@ Random enemies spawn system.
 
 ![alt tag](https://github.com/sunduk/MinimalShooting/blob/master/Documents/Images/controller.png?raw=true)
 
+
+
+Various player weapon system.
+
+![alt tag](https://github.com/sunduk/MinimalShooting/blob/master/Documents/Images/weapons.png?raw=true)
+
+
 ## Description
 
 I have made this for beginners at game development.
