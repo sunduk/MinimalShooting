@@ -1,6 +1,18 @@
 # MinimalShooting
 The simple space shooter style game made using Unity.
 
+![alt tag](https://github.com/sunduk/MinimalShooting/blob/master/Documents/Images/playani.gif?raw=true)
+
+
+Random enemies spawn system.
+
+![alt tag](https://github.com/sunduk/MinimalShooting/blob/master/Documents/Images/enemy_spawner.png?raw=true)
+
+
+
+4 types of movement.
+
+![alt tag](https://github.com/sunduk/MinimalShooting/blob/master/Documents/Images/controller.png?raw=true)
 
 ## Description
 
