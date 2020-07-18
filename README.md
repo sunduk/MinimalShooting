@@ -52,7 +52,7 @@ There are some detailed comments in source codes.
 Feel free to ask me about the codes and bugs.
 
 
-## Development environment.
+## Development environment
 - Unity 2019.3.15f1
 
 
