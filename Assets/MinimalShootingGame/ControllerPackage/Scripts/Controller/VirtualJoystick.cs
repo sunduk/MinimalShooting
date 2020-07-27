@@ -83,26 +83,5 @@ namespace MinimalShooting.ControllerPackage
             this._inputVector = Vector3.zero;
             this.imageJoystick.rectTransform.anchoredPosition = Vector3.zero;
         }
-
-
-        public float Horizontal()
-        {
-            if (this._inputVector.x != 0)
-            {
-                return this._inputVector.x;
-            }
-
-            return Input.GetAxis("Horizontal");
-        }
-
-        public float Vertical()
-        {
-            if (this._inputVector.z != 0)
-            {
-                return this._inputVector.z;
-            }
-
-            return Input.GetAxis("Vertical");
-        }
     }
 }

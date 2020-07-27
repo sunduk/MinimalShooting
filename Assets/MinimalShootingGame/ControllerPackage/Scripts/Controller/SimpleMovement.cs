@@ -23,11 +23,6 @@ namespace MinimalShooting.ControllerPackage
 
         void Update()
         {
-            if (Time.timeScale <= 0.0f)
-            {
-                return;
-            }
-
             Movement();
         }
 
@@ -122,6 +117,10 @@ namespace MinimalShooting.ControllerPackage
         {
             switch (GameControllerSetting.Instance.controllerType)
             {
+                case ControllerType.Keyboard:
+                    KeyboardMovement();
+                    break;
+
                 case ControllerType.VirtualJoystick:
                     JoystickMovement();
                     break;
@@ -132,10 +131,6 @@ namespace MinimalShooting.ControllerPackage
 
                 case ControllerType.TouchAndDrag:
                     TouchAndDragMovement();
-                    break;
-
-                case ControllerType.Keyboard:
-                    KeyboardMovement();
                     break;
             }
 

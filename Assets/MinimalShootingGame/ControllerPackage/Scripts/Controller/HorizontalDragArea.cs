@@ -64,27 +64,5 @@ namespace MinimalShooting.ControllerPackage
         {
             this.isStop = true;
         }
-
-
-        public float Horizontal()
-        {
-            if (_inputVector.x != 0)
-            {
-                return _inputVector.x;
-            }
-
-            return Input.GetAxis("Horizontal");
-        }
-
-
-        public float Vertical()
-        {
-            if (_inputVector.z != 0)
-            {
-                return _inputVector.z;
-            }
-
-            return Input.GetAxis("Vertical");
-        }
     }
 }
