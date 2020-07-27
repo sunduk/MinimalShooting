@@ -4,23 +4,6 @@ The simple space shooter style game made using Unity.
 ![alt tag](https://github.com/sunduk/MinimalShooting/blob/master/Documents/Images/playani.gif?raw=true)
 
 
-Random enemies spawn system.
-
-![alt tag](https://github.com/sunduk/MinimalShooting/blob/master/Documents/Images/enemy_spawner.png?raw=true)
-
-
-
-4 types of movement.
-
-![alt tag](https://github.com/sunduk/MinimalShooting/blob/master/Documents/Images/controller.png?raw=true)
-
-
-
-Various player weapon system.
-
-![alt tag](https://github.com/sunduk/MinimalShooting/blob/master/Documents/Images/weapons.png?raw=true)
-
-
 ## Description
 
 I have made this for beginners at game development.
@@ -28,7 +11,7 @@ I have made this for beginners at game development.
 If you want to make a space shooter style game, this would be a good starting point to you.
 
 
-You could learn to implement below features.
+You could learn how to implement below features.
 - How enemies to be created randomly.
 
 - Basic controller types to use on mobile devices.
@@ -44,13 +27,20 @@ You could learn to implement below features.
 
 - A little of particle systems.
 
+- Some useful scripts.
+(Singleton, Shuffle, Rotator, etc)
 
 There are some detailed comments in source codes.
 
 Feel free to ask me about the codes and bugs.
 
 
-## Development environment.
+## Documents
+Detailed documents about the project : 
+https://github.com/sunduk/MinimalShooting/wiki
+
+
+## Development environment
 - Unity 2019.3.15f1
 
 
