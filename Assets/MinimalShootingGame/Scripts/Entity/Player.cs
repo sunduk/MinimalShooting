@@ -16,8 +16,10 @@ namespace MinimalShooting
             // Instantiate the destroy effect.
             GameObject.Instantiate(this.prefabExplosion, transform.position, Quaternion.identity);
 
+            // Deactivate.
             gameObject.SetActive(false);
 
+            // Call the GameOver method.
             PlayManager.Instance.GameOver();
         }
     }

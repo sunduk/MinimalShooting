@@ -126,12 +126,12 @@ namespace MinimalShooting
 
 
         /// <summary>
-        /// When the enemy got a damage.
+        /// When the enemy gets damaged.
         /// </summary>
         /// <param name="collisionPoint"></param>
         public void OnDamage(Vector3 collisionPoint)
         {
-            // Knock back.
+            // Knockback.
             //Vector3 pos = transform.position;
             //pos.z += 0.2f;
             //transform.position = pos;
@@ -139,15 +139,16 @@ namespace MinimalShooting
             // Instantiate the damage effect.
             GameObject.Instantiate(this.prefabDamage, collisionPoint, Quaternion.identity);
 
-            // Decrease current hp.
-            --this.currentHp;
-
+            // Blink the object.
             if (GetComponentInChildren<MaterialChanger>() != null)
             {
                 GetComponentInChildren<MaterialChanger>().enabled = true;
             }
 
-            // If the current hp is less than zero, it will be destroy.
+            // Decrease current hp.
+            --this.currentHp;
+
+            // If the current hp is less equal than zero, it will be destroyed.
             if (this.currentHp <= 0.0f)
             {
                 DestroyNow();
@@ -183,7 +184,7 @@ namespace MinimalShooting
             MoveByType();
             MoveTrailObject();
             CheckWeapons();
-            CheckBoundary();
+            CheckArea();
         }
 
 
@@ -209,25 +210,26 @@ namespace MinimalShooting
                         // Move by velocity.
                         transform.position += Time.deltaTime * velocity;
 
-                        // Calculate x coords to move zigzag.
                         Vector3 pos = transform.position;
 
                         // How fast turn it can be.
                         float rate = 3.0f;
+
+                        // Calculate x variable to move zigzag.
                         float x = Mathf.Cos(Time.time * rate);
 
                         // Cos returns -1 ~ +1, so we should multiply a radius to get the final position.
                         float radius = 3.0f;
                         pos.x = x * radius;
 
-                        // Apply it. x coords from Cos, other from velocity.
+                        // Apply it. x variable from Cos, other variables from the velocity.
                         transform.position = pos;
                     }
                     break;
 
                 case MovementType.ToPlayer:
                     {
-                        // The velocity already sets to player, so it is same as Straight formular.
+                        // The velocity already sets to player, so it is same as the Straight formula.
                         transform.position += Time.deltaTime * velocity;
                     }
                     break;
@@ -246,7 +248,7 @@ namespace MinimalShooting
                         // Calculate the body position to move down.
                         this.hiddenPosition += Time.deltaTime * velocity;
 
-                        // The final position is combined two vector.
+                        // The final position is combined with two vectors.
                         // One is its own position.
                         // Another is the circle position.
                         transform.position = this.hiddenPosition + localCirclePosition;
@@ -285,7 +287,7 @@ namespace MinimalShooting
         }
 
 
-        void CheckBoundary()
+        void CheckArea()
         {
             // It is destroy when position is over.
             if (transform.position.z >= 20.0f ||

@@ -108,10 +108,8 @@ namespace MinimalShooting
         }
 
 
-        // Update is called once per frame
-        void Update()
+        void DetermineMissileTarget()
         {
-            // Determine the missile target.
             if (this.isFollowTarget)
             {
                 if (this.followTarget == null)
@@ -126,24 +124,35 @@ namespace MinimalShooting
                     }
                 }
             }
+        }
 
+
+        void DetermineDirection()
+        {
             if (this.followTarget != null)
             {
                 // Calculate rotation to target.
                 this.direction = (this.followTarget.position - transform.position).normalized;
                 Quaternion targetRotation = Quaternion.LookRotation(this.direction);
 
-                // This variable represents a quality of the missile.
+                // This variable represents the quality of the missile.
                 // If this value is small, it turns very slowly.
                 // If this value is large, it turns very fast to target.
                 float angularVelocity = 4.0f;
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * angularVelocity);
             }
+        }
 
-            // Move.
+
+        void Move()
+        {
             Vector3 velocity = transform.forward * this.speed;
             transform.position += Time.deltaTime * velocity;
+        }
 
+
+        void CheckArea()
+        {
             // It is destroy when position is over.
             if (transform.position.z >= 10.0f ||
                 transform.position.z <= -10.0f ||
@@ -152,6 +161,16 @@ namespace MinimalShooting
             {
                 Destroy(gameObject);
             }
+        }
+
+
+        // Update is called once per frame
+        void Update()
+        {
+            DetermineMissileTarget();
+            DetermineDirection();
+            Move();
+            CheckArea();
         }
 
 

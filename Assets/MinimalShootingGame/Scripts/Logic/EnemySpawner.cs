@@ -35,38 +35,14 @@ namespace MinimalShooting
         int countMax = 5;
 
 
-        // Private variables.
-        List<Vector3> spawnPoints = new List<Vector3>();
+        [Header("Spawn area")]
+        [SerializeField]
+        Vector3 spawnArea = Vector3.one;
 
 
         private void OnEnable()
         {
-            MakeSpawnPoints();
             StartCoroutine(SpawnLoop());
-        }
-
-
-        /// <summary>
-        /// Make spawn points.
-        /// If you want to more spawn points, edit this method.
-        /// </summary>
-        void MakeSpawnPoints()
-        {
-            int maxPoints = 5;
-            int rowCount = Mathf.CeilToInt(this.countMax / (float)maxPoints);
-            rowCount = Mathf.Clamp(rowCount, 1, 3);
-
-            this.spawnPoints.Clear();
-            float z = transform.position.z;
-            for (int row = 0; row < rowCount; ++row)
-            {
-                z += 2.0f;
-                this.spawnPoints.Add(new Vector3(-3.0f, 0, z));
-                this.spawnPoints.Add(new Vector3(-1.5f, 0, z));
-                this.spawnPoints.Add(new Vector3(0, 0, z));
-                this.spawnPoints.Add(new Vector3(1.5f, 0, z));
-                this.spawnPoints.Add(new Vector3(3.0f, 0, z));
-            }
         }
 
 
@@ -86,7 +62,7 @@ namespace MinimalShooting
             {
                 RunWave();
 
-                // Wait for next wave.
+                // Wait for the next wave.
                 float interval = Random.Range(this.intervalMin, this.intervalMax);
                 yield return new WaitForSeconds(interval);
             }
@@ -95,9 +71,6 @@ namespace MinimalShooting
 
         void RunWave()
         {
-            // Suffle it.
-            Utility.Shuffle<Vector3>(this.spawnPoints);
-
             // It determines how many enemies to be spawned on this wave.
             int count = Random.Range(this.countMin, this.countMax + 1);
             for (int i = 0; i < count; ++i)
@@ -109,9 +82,41 @@ namespace MinimalShooting
                 Enemy enemy = GameObject.Instantiate(this.prefabEnemies[enemyIndex], transform, false);
 
                 // Set its position.
-                enemy.transform.position = spawnPoints[i];
+                enemy.transform.position = GetRandomPosition();
                 enemy.Wakeup();
             }
+        }
+
+
+        /// <summary>
+        /// Get the random spawn position inside of the spawn area.
+        /// </summary>
+        /// <returns></returns>
+        Vector3 GetRandomPosition()
+        {
+            float x = Random.Range(-this.spawnArea.x, this.spawnArea.x);
+            float y = Random.Range(-this.spawnArea.y, this.spawnArea.y);
+            float z = Random.Range(-this.spawnArea.z, this.spawnArea.z);
+
+            return transform.position + new Vector3(x, y, z);
+        }
+
+
+        /// <summary>
+        /// Draw the rectanble of this spawn area for debug.
+        /// </summary>
+        private void OnDrawGizmos()
+        {
+            Vector3 leftTop = transform.position + new Vector3(-this.spawnArea.x, this.spawnArea.y, this.spawnArea.z);
+            Vector3 rightTop = transform.position + new Vector3(this.spawnArea.x, this.spawnArea.y, this.spawnArea.z);
+            Vector3 leftBottom = transform.position + new Vector3(-this.spawnArea.x, this.spawnArea.y, -this.spawnArea.z);
+            Vector3 rightBottom = transform.position + new Vector3(this.spawnArea.x, this.spawnArea.y, -this.spawnArea.z);
+
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(leftTop, rightTop);
+            Gizmos.DrawLine(rightTop, rightBottom);
+            Gizmos.DrawLine(rightBottom, leftBottom);
+            Gizmos.DrawLine(leftBottom, leftTop);
         }
     }
 }
