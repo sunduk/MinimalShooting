@@ -41,12 +41,11 @@ https://github.com/sunduk/MinimalShooting/wiki
 
 
 ## Development environment
-- Unity 2019.3.15f1
+- Unity 2019.3.15f1 / 2019.4.5f1
 
 
 
 ## License
-- 소스코드와 이미지는 아무런 제약 없이 자유롭게 사용 가능합니다.
 - All source codes and images are free to use.
 
 <pre>
