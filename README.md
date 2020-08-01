@@ -68,4 +68,4 @@ https://github.com/sunduk/MinimalShooting/wiki
  */
  </pre>
 
-_In fact, I don't like a beer :smile:_ If you are a native English speaker, I'll very much appreciate it if you tell me about the awkward sentences out there.
+_In fact, I don't like a beer :smile:_ If you are good in English, I'll very much appreciate it if you tell me about the awkward sentences out there.
