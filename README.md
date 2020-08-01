@@ -44,6 +44,14 @@ https://github.com/sunduk/MinimalShooting/wiki
 - Unity 2019.3.15f1 / 2019.4.5f1
 
 
+## Instanllation
+- Using Git : Clone the repository.
+- Download manually : Download the source code or the package file. Then import it to your project.
+
+
+## Play
+- Open the _PlayScene_ file in the _Assets/MinimalShootingGame/Scenes_ folder.
+
 
 ## License
 - All source codes and images are free to use.
