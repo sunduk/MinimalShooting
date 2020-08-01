@@ -11,7 +11,7 @@ I have made this for beginners at game development.
 If you want to make a space shooter-style game, this would be a good starting point for you.
 
 
-You could learn how to implement below features.
+You could learn how to implement the below features.
 - How enemies to be created randomly.
 
 - Basic controller types to use on mobile devices.
