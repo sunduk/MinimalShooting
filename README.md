@@ -8,7 +8,7 @@ The simple space shooter style game made using Unity.
 
 I have made this for beginners at game development.
 
-If you want to make a space shooter style game, this would be a good starting point to you.
+If you want to make a space shooter-style game, this would be a good starting point for you.
 
 
 You could learn how to implement below features.
