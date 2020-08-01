@@ -44,7 +44,7 @@ https://github.com/sunduk/MinimalShooting/wiki
 - Unity 2019.3.15f1 / 2019.4.5f1
 
 
-## Instanllation
+## Installation
 - Using Git : Clone the repository.
 - Download manually : Download the source code or the package file. Then import it to your project.
 
