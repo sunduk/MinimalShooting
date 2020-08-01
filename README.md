@@ -68,4 +68,4 @@ https://github.com/sunduk/MinimalShooting/wiki
  */
  </pre>
 
-_In fact, I don't like a beer :)_
+_In fact, I don't like a beer :smile:_
