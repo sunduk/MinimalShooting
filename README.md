@@ -1,6 +1,6 @@
 [한글버전](https://github.com/sunduk/MinimalShooting/blob/master/README-ko.md)
 
-# MinimalShooting
+# Minimal-The Shooting Game
 The simple space shooter style game made using Unity.
 
 ![alt tag](https://github.com/sunduk/MinimalShooting/blob/master/Documents/Images/playani.gif?raw=true)
