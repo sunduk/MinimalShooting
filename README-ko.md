@@ -1,4 +1,6 @@
-# MinimalShooting
+# Minimal Shooting
+Welcome to the Awesome Game
+
 유니티로 만든 심플한 비행 슈팅 게임
 
 ![alt tag](https://github.com/sunduk/MinimalShooting/blob/master/Documents/Images/playani.gif?raw=true)
