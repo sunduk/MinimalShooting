@@ -8,7 +8,7 @@ The simple space shooter style game made using Unity.
 
 ## Description
 
-I have made this for beginners at game development.
+I created this game for beginners.
 
 If you want to make a space shooter-style game, this would be a good starting point for you.
 
@@ -21,10 +21,10 @@ You could learn how to implement the below features.
 
 - Collision detection.
 
-- Basic weapon system.
+- Basic weapon systems.
 (Straight, To the player, Missile)
 
-- Various movement system.
+- Various movement systems.
 (Straight, To the player, Circle, Zigzag)
 
 - A little of particle systems.
@@ -34,7 +34,7 @@ You could learn how to implement the below features.
 
 There are some detailed comments in source codes.
 
-Feel free to ask me about the codes and bugs.
+Feel free to ask me if you find any bugs.
 
 
 ## Documents
